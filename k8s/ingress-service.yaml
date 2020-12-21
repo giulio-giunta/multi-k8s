@@ -19,7 +19,7 @@ spec:
       secretName: giulio-giunta-com
   rules:
     - host: giuliogiunta.ml
-    - http:
+      http:
         paths:
           - path: /?(.*)
           # UPDATE THIS LINE ABOVE
@@ -32,7 +32,7 @@ spec:
               serviceName: server-cluster-ip-service
               servicePort: 5000
     - host: www.giuliogiunta.ml
-    - http:
+      http:
         paths:
           - path: /?(.*)
           # UPDATE THIS LINE ABOVE
