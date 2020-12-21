@@ -1,6 +1,6 @@
-docker build -t giuntalio/multi-client:latest -t giuntalio/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t giuntalio/multi-server:latest -t giuntalio/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t giuntalio/multi-worker:latest -t giuntalio/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t giuntalio/multi-client:latest -t giuntalio/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t giuntalio/multi-server:latest -t giuntalio/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t giuntalio/multi-worker:latest -t giuntalio/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push giuntalio/multi-client:latest
 docker push giuntalio/multi-server:latest
