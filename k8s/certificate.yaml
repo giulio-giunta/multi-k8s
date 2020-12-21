@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: giulio-giunta-com-tls
+spec:
+  secretName: giulio-giunta-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: giuliogiunta.ml
+  dnsNames:
+    - giuliogiunta.ml
+    - www.giuliogiunta.ml
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - giuliogiunta.ml
+          - www.giuliogiunta.ml
